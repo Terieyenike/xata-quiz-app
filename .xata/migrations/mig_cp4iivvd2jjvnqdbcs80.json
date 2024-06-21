@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cp4iivvd2jjvnqdbcs80",
+    "operations": [
+      {
+        "add_column": {
+          "table": "answers",
+          "column": {
+            "pk": false,
+            "name": "is_correct",
+            "type": "boolean",
+            "unique": false,
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cp4iivvd2jjvnqdbcs80",
+  "parent": "mig_cp4iil7d2jjvnqdbcs70",
+  "startedAt": "2024-05-18T22:19:44.267311Z"
+}

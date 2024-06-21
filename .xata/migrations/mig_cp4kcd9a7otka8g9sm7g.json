@@ -1,0 +1,31 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cp4kcd9a7otka8g9sm7g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "answers",
+          "column": {
+            "pk": false,
+            "name": "question",
+            "type": "text",
+            "unique": false,
+            "comment": "{\"xata.link\":\"questions\"}",
+            "nullable": true,
+            "references": {
+              "name": "question_link",
+              "table": "questions",
+              "column": "xata_id",
+              "on_delete": "CASCADE"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cp4kcd9a7otka8g9sm7g",
+  "parent": "mig_cp4iivvd2jjvnqdbcs80",
+  "startedAt": "2024-05-19T00:22:14.096355Z"
+}

@@ -1,0 +1,29 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cp4iil7d2jjvnqdbcs70",
+    "operations": [
+      {
+        "add_column": {
+          "table": "answers",
+          "column": {
+            "pk": false,
+            "name": "answer_text",
+            "type": "text",
+            "check": {
+              "name": "answers_xata_string_length_answer_text",
+              "constraint": "LENGTH(\"answer_text\") <= 2048"
+            },
+            "unique": false,
+            "comment": "{\"xata.type\":\"string\"}",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cp4iil7d2jjvnqdbcs70",
+  "parent": "mig_cp4iiavd2jjvnqdbcs60",
+  "startedAt": "2024-05-18T22:19:01.019637Z"
+}

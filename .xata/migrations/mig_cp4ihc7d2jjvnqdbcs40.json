@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cp4ihc7d2jjvnqdbcs40",
+    "operations": [
+      {
+        "drop_column": {
+          "table": "questions",
+          "column": "question_text"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cp4ihc7d2jjvnqdbcs40",
+  "parent": "mig_cp4ih8nd2jjvnqdbcs30",
+  "startedAt": "2024-05-18T22:16:17.195633Z"
+}
