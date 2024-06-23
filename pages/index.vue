@@ -6,10 +6,9 @@ useHead({
 
 const questionsAnswered = 0;
 const totalCorrect = 0;
+
 const { data: questions } = await useFetch(`/api/questions`);
 const { data: answers } = await useFetch(`/api/answers`);
-
-console.log(answers);
 
 const results = [
   {

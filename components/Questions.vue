@@ -14,7 +14,7 @@
       <div class="answers">
         <div
           class="answer"
-          v-for="answer in getAnswersForQuestion(question.xata_id)"
+          v-for="answer in getAnswersForQuestion(question.id)"
           :key="answer.xata_id">
           {{ answer.answer_text }}
         </div>
@@ -29,7 +29,9 @@ export default {
   methods: {
     getAnswersForQuestion(questionId) {
       return this.answers
-        .filter((answer) => answer.xata_id === questionId)
+        .filter((answer) => {
+          return answer.question.id === questionId;
+        })
         .slice(0, 4);
     },
   },
