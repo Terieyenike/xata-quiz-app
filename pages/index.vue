@@ -1,5 +1,4 @@
-<!-- index.vue -->
-<script setup lang="ts">
+<script setup lang="js">
 useHead({
   title: "Quiz app with Xata",
 });
@@ -24,6 +23,13 @@ const results = [
     desc: "Studying has definitely paid off for you!",
   },
 ];
+
+const questionAnswered = (is_correct) => {
+  if (is_correct) {
+    totalCorrect.value++;
+    questionsAnswered.value++;
+  }
+};
 </script>
 
 <template>
@@ -32,6 +38,8 @@ const results = [
       <Questions
         v-if="questionsAnswered < questions.length"
         :questions="questions"
+        :questionsAnswered="questionsAnswered"
+        @question-answered="questionAnswered"
         :answers="answers" />
       <Result v-else />
       <button type="button" class="reset-btn">Reset</button>

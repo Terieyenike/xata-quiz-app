@@ -1,21 +1,27 @@
 <template>
   <div class="questions-ctr">
     <div class="progress">
-      <div class="bar"></div>
+      <div
+        class="bar"
+        :style="{
+          width: `${(questionsAnswered / questions.length) * 100}%`,
+        }"></div>
       <div class="status">
-        1 out of {{ questions.length }} questions answered
+        {{ questionsAnswered }} out of {{ questions.length }} questions answered
       </div>
     </div>
     <div
       class="single-question"
-      v-for="question in questions"
-      :key="question.xata_id">
+      v-for="(question, qi) in questions"
+      :key="question.id"
+      v-show="questionsAnswered === qi">
       <div class="question">{{ question.question_text }}</div>
       <div class="answers">
         <div
           class="answer"
           v-for="answer in getAnswersForQuestion(question.id)"
-          :key="answer.xata_id">
+          :key="answer.answer_text"
+          @click.prevent="selectAnswer(answer.is_correct)">
           {{ answer.answer_text }}
         </div>
       </div>
@@ -23,17 +29,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["questions", "answers"],
-  methods: {
-    getAnswersForQuestion(questionId) {
-      return this.answers
-        .filter((answer) => {
-          return answer.question.id === questionId;
-        })
-        .slice(0, 4);
-    },
-  },
+<script setup lang="js">
+const props = defineProps({
+  questions: Array,
+  answers: Array,
+  questionsAnswered: Number,
+});
+
+const emit = defineEmits(["question-answered"]);
+
+const getAnswersForQuestion = (questionId) => {
+  return props.answers
+    .filter((answer) => answer.question.id === questionId)
+    .slice(0, 4);
+};
+
+const selectAnswer = (is_correct) => {
+  emit("question-answered", is_correct);
 };
 </script>
