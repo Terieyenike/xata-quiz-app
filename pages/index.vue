@@ -3,8 +3,8 @@ useHead({
   title: "Quiz app with Xata",
 });
 
-const questionsAnswered = 0;
-const totalCorrect = 0;
+let questionsAnswered = 0;
+let totalCorrect = 0;
 
 const { data: questions } = await useFetch(`/api/questions`);
 const { data: answers } = await useFetch(`/api/answers`);
@@ -26,8 +26,8 @@ const results = [
 
 const questionAnswered = (is_correct) => {
   if (is_correct) {
-    totalCorrect.value++;
-    questionsAnswered.value++;
+    totalCorrect++;
+    questionsAnswered++;
   }
 };
 </script>
