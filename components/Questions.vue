@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 const props = defineProps({
   questions: Array,
   answers: Array,

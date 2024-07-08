@@ -1,10 +1,10 @@
-<script setup lang="js">
+<script setup lang="ts">
 useHead({
   title: "Quiz app with Xata",
 });
 
-const questionsAnswered = 0;
-const totalCorrect = 0;
+let questionsAnswered = useState("questionsAnswered", () => 0);
+let totalCorrect = useState("totalCorrect", () => 0);
 
 const { data: questions } = await useFetch(`/api/questions`);
 const { data: answers } = await useFetch(`/api/answers`);
@@ -24,11 +24,11 @@ const results = [
   },
 ];
 
-const questionAnswered = (is_correct) => {
+const questionAnswered = (is_correct: boolean) => {
   if (is_correct) {
     totalCorrect.value++;
-    questionsAnswered.value++;
   }
+  questionsAnswered.value++;
 };
 </script>
 
@@ -36,7 +36,7 @@ const questionAnswered = (is_correct) => {
   <main>
     <div class="ctr">
       <Questions
-        v-if="questionsAnswered < questions.length"
+        v-if="questionsAnswered < questions?.length"
         :questions="questions"
         :questionsAnswered="questionsAnswered"
         @question-answered="questionAnswered"
