@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
   questions: Array,
   answers: Array,
@@ -39,9 +39,7 @@ const props = defineProps({
 const emit = defineEmits(["question-answered"]);
 
 const getAnswersForQuestion = (questionId) => {
-  return props.answers
-    .filter((answer) => answer.question.id === questionId)
-    .slice(0, 4);
+  return props.answers.filter((answer) => answer.question.id === questionId);
 };
 
 const selectAnswer = (is_correct) => {

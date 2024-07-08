@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   title: "Quiz app with Xata",
 });
@@ -24,7 +24,7 @@ const results = [
   },
 ];
 
-const questionAnswered = (is_correct: boolean) => {
+const questionAnswered = (is_correct) => {
   if (is_correct) {
     totalCorrect.value++;
   }
@@ -44,5 +44,19 @@ const questionAnswered = (is_correct: boolean) => {
       <Result v-else />
       <button type="button" class="reset-btn">Reset</button>
     </div>
+    <footer class="footer">
+      <div class="info">
+        <p>Quiz app with Xata</p>
+        <p>
+          Built with <span class="hearts">&hearts;</span> by
+          <a
+            href="https://twitter.com/terieyenike"
+            target="_"
+            rel="noopener noreferrer"
+            >teri</a
+          >
+        </p>
+      </div>
+    </footer>
   </main>
 </template>
