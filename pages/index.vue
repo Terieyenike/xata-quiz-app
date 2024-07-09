@@ -1,10 +1,16 @@
 <script setup>
-useHead({
-  title: "Quiz app with Xata",
+useSeoMeta({
+  title: "Quiz - QA app",
+  ogTitle: "Quiz - QA app",
+  description: "Let's test your knowledge",
+  ogDescription: "Let's test your knowledge",
+  ogImage:
+    "https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png",
+  twitterCard: "summary_large_image",
 });
 
-let questionsAnswered = useState("questionsAnswered", () => 0);
-let totalCorrect = useState("totalCorrect", () => 0);
+const questionsAnswered = useState("questionsAnswered", () => 0);
+const totalCorrect = useState("totalCorrect", () => 0);
 
 const { data: questions } = await useFetch(`/api/questions`);
 const { data: answers } = await useFetch(`/api/answers`);
