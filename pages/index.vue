@@ -2,11 +2,20 @@
 useSeoMeta({
   title: "Quiz - QA app",
   ogTitle: "Quiz - QA app",
-  description: "Let's test your knowledge",
-  ogDescription: "Let's test your knowledge",
+  description:
+    "Let's test your knowledge with our engaging and challenging quiz app.",
+  ogDescription:
+    "Let's test your knowledge with our engaging and challenging quiz app.",
+  ogType: "website",
+  ogUrl: "https://quiz-app-alpha-virid.vercel.app/",
   ogImage:
     "https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png",
   twitterCard: "summary_large_image",
+  twitterTitle: "Quiz - QA app",
+  twitterDescription:
+    "Let's test your knowledge with our engaging and challenging quiz app.",
+  twitterImage:
+    "https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png",
 });
 
 const questionsAnswered = useState("questionsAnswered", () => 0);
@@ -47,7 +56,7 @@ const questionAnswered = (is_correct) => {
         :questionsAnswered="questionsAnswered"
         @question-answered="questionAnswered"
         :answers="answers" />
-      <Result v-else />
+      <Result v-else :results="results" :totalCorrect="totalCorrect" />
       <button type="button" class="reset-btn">Reset</button>
     </div>
     <footer class="footer">
