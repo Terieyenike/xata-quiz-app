@@ -2,12 +2,8 @@
 
 The [QA Quiz App](https://quiz-app-alpha-virid.vercel.app/) is designed to provide users with a seamless quiz-taking experience. Leveraging the power of Nuxt and Xata, the app fetches questions from a serverless database, tracks user performance, and displays results in real-time. This project serves as an excellent example of how to integrate modern front-end framework, Nuxt with scalable back-end services.
 
-<div style="position: relative; display: inline-block;">
-  <a href="https://res.cloudinary.com/terieyenike/video/upload/v1720633475/quiz_app_lzfiji.mov">
-    <img src="https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png" alt="Quiz App" style="width: 100%;" />
-    <img src="https://img.icons8.com/?size=100&id=80556&format=png&color=000000" alt="Play Video" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20%;" />
-  </a>
-</div>
+[![Quiz App](https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png)](https://res.cloudinary.com/terieyenike/video/upload/v1720633475/quiz_app_lzfiji.mov)
+
 Click the image to watch the video.
 
 ## Features
