@@ -1,75 +1,96 @@
-# Nuxt 3 Minimal Starter
+# QA quiz app
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The [QA Quiz App](https://quiz-app-alpha-virid.vercel.app/) is designed to provide users with a seamless quiz-taking experience. Leveraging the power of Nuxt and Xata, the app fetches questions from a serverless database, tracks user performance, and displays results in real-time. This project serves as an excellent example of how to integrate modern front-end framework, Nuxt with scalable back-end services.
 
-## Setup
+<div style="position: relative; display: inline-block;">
+  <a href="https://res.cloudinary.com/terieyenike/video/upload/v1720633475/quiz_app_lzfiji.mov">
+    <img src="https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png" alt="Quiz App" style="width: 100%;" />
+    <img src="https://img.icons8.com/?size=100&id=80556&format=png&color=000000" alt="Play Video" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20%;" />
+  </a>
+</div>
+Click the image to watch the video.
 
-Make sure to install the dependencies:
+## Features
+
+- Fetches questions and answers stored in the serverless database, Xata
+- Tracks the number of questions answered and correct answers
+- Displays a final result based on the user's performance
+- Responsive design, ensures a smooth user experience across various devices.
+
+## Getting started
+
+### Prerequisites
+
+Ensure you have the following installed on your local development environment:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+### Installation
+
+Clone the repository:
 
 ```bash
-# npm
+git clone https://github.com/Terieyenike/xata-quiz-app
+cd xata-quiz-app
+```
+
+### Install the dependencies:
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
+# or
 yarn install
-
-# bun
+# or
+pnpm install
+# or
 bun install
 ```
 
-## Development Server
+### Running the Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
+# or
 yarn dev
-
-# bun
-bun run dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Production
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Build the application for production:
+## Usage
 
-```bash
-# npm
-npm run build
+Once the server is running, navigate to the provided local URL. Answer each question by selecting the appropriate option and at the end of the quiz, your results will be displayed.
 
-# pnpm
-pnpm run build
+## Tech stack
 
-# yarn
-yarn build
+- Framework: Nuxt
+- Database: Xata.io
+- Hosting: Vercel
 
-# bun
-bun run build
-```
+## Learn More
 
-Locally preview production build:
+To learn more about Nuxt.js and Xata.io, take a look at the following resources:
 
-```bash
-# npm
-npm run preview
+- [Get started with Nuxt.js](https://nuxt.com/docs)
+- [Learn Xata.io](https://xata.io/docs) - the only serverless data platform by developers, for developers.
 
-# pnpm
-pnpm run preview
+## Contributing
 
-# yarn
-yarn preview
+Contributions are welcome! Please follow these steps to contribute:
 
-# bun
-bun run preview
-```
+1. Fork the repository.
+1. Create a new branch (git checkout -b feature-branch).
+1. Make your changes.
+1. Commit your changes (git commit -m 'Add some feature').
+1. Push to the branch (git push origin feature-branch).
+1. Open a pull request.
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contributors
+
+[Teri](https://twitter.com/terieyenike)
