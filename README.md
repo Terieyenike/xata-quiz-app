@@ -4,8 +4,6 @@ The [QA Quiz App](https://quiz-app-alpha-virid.vercel.app/) is designed to provi
 
 [![Quiz App](https://res.cloudinary.com/terieyenike/image/upload/v1720489148/quiz_vyvk4d.png)](https://res.cloudinary.com/terieyenike/video/upload/v1720633475/quiz_app_lzfiji.mov)
 
-Click the image to watch the video.
-
 ## Features
 
 - Fetches questions and answers stored in the serverless database, Xata
