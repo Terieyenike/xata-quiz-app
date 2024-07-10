@@ -17,6 +17,8 @@ const totalCorrect = useState("totalCorrect", () => 0);
 const { data: questions } = await useFetch(`/api/questions`);
 const { data: answers } = await useFetch(`/api/answers`);
 
+const numQuestions = questions.value.length;
+
 const results = [
   {
     min: 0,
@@ -25,8 +27,8 @@ const results = [
     desc: "Do a little more studying and you may succeed!",
   },
   {
-    min: 4,
-    max: 4,
+    min: numQuestions,
+    max: numQuestions,
     title: "Wow, you're a genius!",
     desc: "Studying has definitely paid off for you!",
   },
