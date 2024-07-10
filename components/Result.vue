@@ -1,6 +1,6 @@
 <template>
   <div class="result">
-    <div class="title">{{ currentResult.title }}</div>
+    <div :class="titleClass">{{ currentResult.title }}</div>
     <div class="desc">
       {{ currentResult.desc }}
     </div>
@@ -28,4 +28,12 @@ const resultIndex = computed(() => {
 });
 
 const currentResult = computed(() => props.results[resultIndex.value]);
+
+const titleClass = computed(() => {
+  return {
+    title: true,
+    correct: props.totalCorrect === props.questionsAnswered,
+    incorrect: props.totalCorrect !== props.questionsAnswered,
+  };
+});
 </script>
