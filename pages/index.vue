@@ -54,7 +54,11 @@ const reset = () => {
         :questionsAnswered="questionsAnswered"
         @question-answered="questionAnswered"
         :answers="answers" />
-      <Result v-else :results="results" :totalCorrect="totalCorrect" />
+      <Result
+        v-else
+        :results="results"
+        :totalCorrect="totalCorrect"
+        :questionsAnswered="questionsAnswered" />
       <button
         type="button"
         class="reset-btn"

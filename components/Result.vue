@@ -4,6 +4,9 @@
     <div class="desc">
       {{ currentResult.desc }}
     </div>
+    <div class="score">
+      You answered {{ totalCorrect }} out of {{ questionsAnswered }} correctly.
+    </div>
   </div>
 </template>
 
@@ -11,6 +14,7 @@
 const props = defineProps({
   results: Array,
   totalCorrect: Number,
+  questionsAnswered: Number,
 });
 
 const resultIndex = computed(() => {
