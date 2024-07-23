@@ -1,12 +1,29 @@
 {
   "done": true,
   "migration": {
-    "name": "mig_cp4iiavd2jjvnqdbcs60",
+    "name": "mig_cqegfmt06a8l4fc4q3r0",
     "operations": [
       {
         "create_table": {
           "name": "answers",
           "columns": [
+            {
+              "name": "answer_text",
+              "type": "text",
+              "comment": "{\"xata.type\":\"string\"}",
+              "nullable": true
+            },
+            {
+              "name": "is_correct",
+              "type": "boolean",
+              "nullable": true
+            },
+            {
+              "name": "question",
+              "type": "text",
+              "comment": "{\"xata.type\":\"string\"}",
+              "nullable": true
+            },
             {
               "name": "xata_updatedat",
               "type": "timestamptz",
@@ -54,8 +71,8 @@
     ]
   },
   "migrationType": "pgroll",
-  "name": "mig_cp4iiavd2jjvnqdbcs60",
-  "parent": "mig_cp4ihrnd2jjvnqdbcs50",
+  "name": "mig_cqegfmt06a8l4fc4q3r0",
+  "parent": "mig_cqegfbd06a8l4fc4q3q0",
   "schema": "public",
-  "startedAt": "2024-05-18T22:18:19.815829Z"
+  "startedAt": "2024-07-21T13:06:36.19596Z"
 }

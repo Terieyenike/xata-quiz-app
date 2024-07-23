@@ -69,19 +69,6 @@ const reset = () => {
         Reset
       </button>
     </div>
-    <footer class="footer">
-      <div class="info">
-        <p>Quiz app with Xata</p>
-        <p>
-          Built with <span class="hearts">&hearts;</span> by
-          <a
-            href="https://twitter.com/terieyenike"
-            target="_"
-            rel="noopener noreferrer"
-            >teri</a
-          >
-        </p>
-      </div>
-    </footer>
+    <Footer />
   </main>
 </template>

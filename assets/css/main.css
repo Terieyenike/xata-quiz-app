@@ -155,16 +155,19 @@ body {
 }
 
 .footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
   position: fixed;
-  bottom: 0;
   width: 100%;
-  background-color: #f8f8f8;
-  border-top: 0.063rem solid #e7e7e7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.875rem;
-  color: #333;
+  bottom: 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .footer .info {
@@ -173,14 +176,45 @@ body {
   align-items: center;
 }
 
-.footer .hearts {
-  color: red;
+.footer .info p {
+  margin: 5px 0;
 }
 
-@media (min-width: 48rem) {
+.footer .info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer .info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 5px;
+  }
+
+  .footer .info p {
+    font-size: 14px;
+    margin: 3px 0;
+  }
+
+  .footer .info a {
+    font-size: 14px;
+  }
+
+  .footer .info p:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) {
+  .footer {
+    padding: 20px 0;
+  }
+
   .footer .info {
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
   }
 }

@@ -25,5 +25,6 @@
   "migrationType": "pgroll",
   "name": "mig_cp4iil7d2jjvnqdbcs70",
   "parent": "mig_cp4iiavd2jjvnqdbcs60",
+  "schema": "public",
   "startedAt": "2024-05-18T22:19:01.019637Z"
 }
