@@ -51,11 +51,11 @@ const reset = () => {
   <main>
     <div class="ctr">
       <Questions
-        v-if="questionsAnswered < questions?.length"
+        v-if="questionsAnswered < questions.length"
         :questions="questions"
+        :answers="answers"
         :questionsAnswered="questionsAnswered"
-        @question-answered="questionAnswered"
-        :answers="answers" />
+        @question-answered="questionAnswered" />
       <Result
         v-else
         :results="results"
@@ -64,8 +64,8 @@ const reset = () => {
       <button
         type="button"
         class="reset-btn"
-        @click.prevent="reset"
-        v-if="questionsAnswered === questions.length">
+        v-if="questionsAnswered === questions.length"
+        @click.prevent="reset">
         Reset
       </button>
     </div>

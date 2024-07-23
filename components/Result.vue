@@ -1,15 +1,3 @@
-<template>
-  <div class="result">
-    <div :class="titleClass">{{ currentResult.title }}</div>
-    <div class="desc">
-      {{ currentResult.desc }}
-    </div>
-    <div class="score">
-      You answered {{ totalCorrect }} out of {{ questionsAnswered }} correctly.
-    </div>
-  </div>
-</template>
-
 <script setup>
 const props = defineProps({
   results: Array,
@@ -37,3 +25,15 @@ const titleClass = computed(() => {
   };
 });
 </script>
+
+<template>
+  <div class="result">
+    <div :class="titleClass">{{ currentResult.title }}</div>
+    <div class="desc">
+      {{ currentResult.desc }}
+    </div>
+    <div class="score">
+      You answered {{ totalCorrect }} out of {{ questionsAnswered }} correctly.
+    </div>
+  </div>
+</template>

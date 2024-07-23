@@ -1,3 +1,20 @@
+<script setup>
+const props = defineProps({
+  questions: Array,
+  answers: Array,
+  questionsAnswered: Number,
+});
+
+const getAnswersForQuestion = (questionId) => {
+  return props.answers.filter((answer) => answer.question.id === questionId);
+};
+const emit = defineEmits(["question-answered"]);
+
+const selectAnswer = (is_correct) => {
+  emit("question-answered", is_correct);
+};
+</script>
+
 <template>
   <div class="questions-ctr">
     <div class="progress">
@@ -28,21 +45,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  questions: Array,
-  answers: Array,
-  questionsAnswered: Number,
-});
-
-const emit = defineEmits(["question-answered"]);
-
-const getAnswersForQuestion = (questionId) => {
-  return props.answers.filter((answer) => answer.question.id === questionId);
-};
-
-const selectAnswer = (is_correct) => {
-  emit("question-answered", is_correct);
-};
-</script>
