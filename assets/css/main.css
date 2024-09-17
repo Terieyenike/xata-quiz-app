@@ -9,6 +9,32 @@ body {
   background: #e6ecf1;
 }
 
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+}
+
+.github-link {
+  color: #fff;
+  background-color: #555;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.github-link:hover {
+  background-color: #777;
+}
+
 .ctr {
   margin: 0 auto;
   max-width: 37.5rem;
@@ -216,5 +242,12 @@ body {
   .footer .info {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .github-link {
+    padding: 8px 15px;
+    font-size: 0.9em;
   }
 }
