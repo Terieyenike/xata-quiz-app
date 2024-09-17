@@ -49,6 +49,7 @@ const reset = () => {
 
 <template>
   <main>
+    <Header />
     <div class="ctr">
       <Questions
         v-if="questionsAnswered < questions.length"
