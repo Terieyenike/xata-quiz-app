@@ -87,4 +87,4 @@ Contributions are welcome! Please follow these steps to contribute:
 
 ## Contributors
 
-[Teri](https://twitter.com/terieyenike)
+[Teri](https://twitter.com/unicodebyte)
