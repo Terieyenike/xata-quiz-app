@@ -6,7 +6,7 @@
         <p>
           Built with <span class="hearts">&hearts;</span> by
           <a
-            href="https://twitter.com/terieyenike"
+            href="https://twitter.com/unicodebyte"
             target="_"
             rel="noopener noreferrer"
             >teri</a
